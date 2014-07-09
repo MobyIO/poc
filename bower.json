@@ -1,5 +1,5 @@
 {
-  "name": "famousAngularStarter",
+  "name": "moby-poc",
   "version": "0.0.2",
   "dependencies": {
     "angular": "1.2.18",
