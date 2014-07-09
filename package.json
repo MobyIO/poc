@@ -41,7 +41,7 @@
     "require-dir": "~0.1.0"
   },
   "scripts": {
-    "postinstall": "bower install",
+    "install": "bower cache clean && bower install",
     "start": "gulp watch"
   },
   "engines": {
