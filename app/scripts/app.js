@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('famousAngularStarter',
+angular.module('moby',
   ['ngAnimate', 'ngCookies',
     'ngTouch', 'ngSanitize',
     'ngResource', 'ui.router',
@@ -9,7 +9,7 @@ angular.module('famousAngularStarter',
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'partials/main.html',
+        templateUrl: 'partials/app.html',
         controller: 'MainCtrl'
       })
       .state('jade', {

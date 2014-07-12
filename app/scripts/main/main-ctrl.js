@@ -1,12 +1,12 @@
 'use strict';
 
-angular.module('famousAngularStarter')
+angular.module('moby')
   .controller('MainCtrl', function ($scope, $famous) {
     var Transitionable = $famous['famous/transitions/Transitionable'];
     var Timer = $famous['famous/utilities/Timer'];
 
     $scope.spinner = {
-      speed: 55
+      speed: 5
     };
     $scope.rotateY = new Transitionable(0);
 
