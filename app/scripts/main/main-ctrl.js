@@ -1,19 +1,10 @@
 'use strict';
 
 angular.module('moby')
-  .controller('MainCtrl', function ($scope, $famous) {
-    var Transitionable = $famous['famous/transitions/Transitionable'];
-    var Timer = $famous['famous/utilities/Timer'];
-
-    $scope.spinner = {
-      speed: 5
+.controller('MainCtrl', function ($scope, $famous) {
+    $scope.footerGridOptions = {
+           dimensions: [4,1], // specifies number of columns and rows
     };
-    $scope.rotateY = new Transitionable(0);
-
-    //run function on every tick of the Famo.us engine
-    Timer.every(function(){
-      var adjustedSpeed = parseFloat($scope.spinner.speed) / 1200;
-      $scope.rotateY.set($scope.rotateY.get() + adjustedSpeed);
-    }, 1);
-
-  });
+    var nav_footer_image_size = [undefined,50];
+    $scope.navs = [{class: "footer_nav_home", size: nav_footer_image_size}, {class: "footer_nav_popular", size: nav_footer_image_size}, {class: "footer_nav_wish_list", size: nav_footer_image_size}, {class: "footer_nav_cart", size: nav_footer_image_size}];
+});

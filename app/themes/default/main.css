@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.full-screen {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer_nav {
+    background-color: #a1d042;
+}
+.footer_nav_home {
+    background-image:url('img/footer_nav_home.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:50px;
+    width:auto;
+}
+.footer_nav_popular {
+    background-image:url('img/footer_nav_home.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:50px;
+    width:auto;
+}
+.footer_nav_wish_list {
+    background-image:url('img/footer_nav_home.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:50px;
+    width:auto;
+}
+.footer_nav_cart {
+    background-image:url('img/footer_nav_home.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+    height:50px;
+    width:auto;
+}
