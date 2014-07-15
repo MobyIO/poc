@@ -10,9 +10,22 @@ body {
     left: 0;
     right: 0;
 }
-
+.header {
+    background-color: #3bafda;
+    height:50px;
+    width:auto;
+}
+.header .search {
+    background-image:url('img/header_search.png');
+    background-repeat:no-repeat;
+    background-position:center right;
+    height:50px;
+    width:auto;
+    background-size: 20px 20px;
+    margin-right:10px;
+}
 .footer_nav {
-    background-color: #a1d042;
+    background-color: #3bafda;
 }
 .footer_nav_home {
     background-image:url('img/footer_nav_home.png');
@@ -20,25 +33,29 @@ body {
     background-position:center center;
     height:50px;
     width:auto;
+    background-size: 35px 35px;
 }
 .footer_nav_popular {
-    background-image:url('img/footer_nav_home.png');
+    background-image:url('img/footer_nav_popular.png');
     background-repeat:no-repeat;
     background-position:center center;
     height:50px;
     width:auto;
+    background-size: 35px 35px;
 }
 .footer_nav_wish_list {
-    background-image:url('img/footer_nav_home.png');
+    background-image:url('img/footer_nav_wish_list.png');
     background-repeat:no-repeat;
     background-position:center center;
     height:50px;
     width:auto;
+    background-size: 35px 35px;
 }
 .footer_nav_cart {
-    background-image:url('img/footer_nav_home.png');
+    background-image:url('img/footer_nav_cart.png');
     background-repeat:no-repeat;
     background-position:center center;
     height:50px;
     width:auto;
+    background-size: 35px 35px;
 }

@@ -1,4 +1,9 @@
 <fa-app class="full-screen">
+<fa-header-footer-layout>
+<fa-surface class="header" fa-size="[undefined,50]">
+<div class="search"></div>
+</fa-surface>
+</fa-header-footer-layout>
 <fa-grid-layout fa-options="footerGridOptions">
 <fa-modifier fa-origin="[0,1]" fa-align="[0,1]" ng-repeat="nav in navs" fa-size="nav.size">
 <fa-surface class="footer_nav"><div class="{{nav.class}}"></div></fa-surface>
