@@ -14,6 +14,7 @@ body {
     background-color: #3bafda;
     height:50px;
     width:auto;
+    z-index:100;
 }
 .header .search {
     background-image:url('img/header_search.png');
@@ -26,6 +27,7 @@ body {
 }
 .footer_nav {
     background-color: #3bafda;
+    z-index:100;
 }
 .footer_nav_home {
     background-image:url('img/footer_nav_home.png');
@@ -35,16 +37,16 @@ body {
     width:auto;
     background-size: 35px 35px;
 }
-.footer_nav_popular {
-    background-image:url('img/footer_nav_popular.png');
+.footer_nav_search {
+    background-image:url('img/footer_nav_search.png');
     background-repeat:no-repeat;
     background-position:center center;
     height:50px;
     width:auto;
     background-size: 35px 35px;
 }
-.footer_nav_wish_list {
-    background-image:url('img/footer_nav_wish_list.png');
+.footer_nav_popular {
+    background-image:url('img/footer_nav_popular.png');
     background-repeat:no-repeat;
     background-position:center center;
     height:50px;

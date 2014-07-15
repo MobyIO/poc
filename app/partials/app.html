@@ -1,12 +1,29 @@
 <fa-app class="full-screen">
-<fa-header-footer-layout>
-<fa-surface class="header" fa-size="[undefined,50]">
-<div class="search"></div>
-</fa-surface>
-</fa-header-footer-layout>
+
+<!-- Header Nav -->
+<fa-modifier fa-origin="[0,0]" fa-align="[0,0]" fa-translate="[0,0,100]" fa-size="[undefined,50]">
+<fa-surface class="header"><div class="setting"></div></fa-surface>
+</fa-modifier>
+
+<!-- Footer Nav -->
 <fa-grid-layout fa-options="footerGridOptions">
-<fa-modifier fa-origin="[0,1]" fa-align="[0,1]" ng-repeat="nav in navs" fa-size="nav.size">
+<fa-modifier fa-origin="[0,1]" fa-align="[0,1]" fa-translate="[0,0,100]" ng-repeat="nav in navs" fa-size="nav.size">
 <fa-surface class="footer_nav"><div class="{{nav.class}}"></div></fa-surface>
 </fa-modifier>
 </fa-grid-layout>
+
+<fa-container-surface fa-options="options.myScrollView" fa-size="[200,200]">
+<!-- fa-scroll-view receives all events from $scope.eventHandler, and decides how to handle them -->
+<fa-scroll-view fa-pipe-from="eventHandler" fa-options="options.myScrollView">
+<fa-view ng-repeat="item in list">
+<fa-modifier id="{{'listItem' + $index}}" fa-translate="[0,50,0]" fa-align="[0,0]" fa-size="[undefined,250]">
+<!-- All events on fa-surfaces (click, mousewheel) are piped to $scope.eventHandler -->
+<fa-surface fa-pipe-to="eventHandler" fa-background-color="'red'">
+{{item.content}}
+</fa-surface>
+</fa-modifier>
+</fa-view>
+</fa-scroll-view>
+</fa-container-surface>
+
 </fa-app>
