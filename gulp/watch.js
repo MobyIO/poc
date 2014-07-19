@@ -13,7 +13,7 @@ gulp.task('watch', ['serve'], function () {
         'app/partials/**/*.html',
         'app/partials/**/*.haml',
         'app/partials/**/*.jade',
-        'app/styles/**/*.css',
+        'app/themes/**/*.css',
         'app/scripts/**/*.js',
         'app/images/**/*'
     ]).on('change', function (file) {
