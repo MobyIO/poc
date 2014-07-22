@@ -18,8 +18,9 @@
 <fa-view ng-repeat="item in list">
 <fa-modifier id="{{'listItem' + $index}}" fa-translate="[0,50,0]" fa-align="[0,0]" fa-size="[undefined,250]">
 <!-- All events on fa-surfaces (click, mousewheel) are piped to $scope.eventHandler -->
-<fa-surface fa-pipe-to="eventHandler" fa-background-color="'red'">
-{{item.title}}
+<fa-surface fa-pipe-to="eventHandler">
+<img alt="{{item.title}}" src="{{item.thumbnail.medium}}" />
+<p>{{item.description}}</p>
 </fa-surface>
 </fa-modifier>
 </fa-view>
