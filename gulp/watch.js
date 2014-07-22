@@ -11,8 +11,6 @@ gulp.task('watch', ['serve'], function () {
 
     gulp.watch([
         'app/partials/**/*.html',
-        'app/partials/**/*.haml',
-        'app/partials/**/*.jade',
         'app/themes/**/*.css',
         'app/scripts/**/*.js',
         'app/images/**/*'
