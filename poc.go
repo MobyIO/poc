@@ -7,9 +7,17 @@ import (
     "flag"
 )
 
+type Thumbnail struct {
+    Small       string      `json:"small"`
+    Medium      string      `json:"medium"`
+    Large       string      `json:"large"`
+    XLarge      string      `json:"xLarge"`
+}
+
 type Product struct {
     Title           string  `json:"title"`
     Description     string  `json:"description"`
+    Thumbnails      Thumbnail `json:"thumbnail"`
 }
 
 func listProducts( w http.ResponseWriter, r *http.Request){
@@ -41,7 +49,18 @@ func main() {
 
 func getProducts()([]byte, error) {
     var products = make([]Product ,0)
-    products = append(products, Product{"World War Z","Book about Zombie that runs really fast"})
-    products = append(products, Product{"Moby Dick","The narrator, Ishmael, is an observant young man setting out from Manhattan Island who has experience in the merchant marine but has recently decided his next voyage will be on a whaling ship. On a cold, gloomy night in December, he arrives at the Spouter-Inn in New Bedford, Massachusetts, and agrees to share a bed with a then-absent stranger. When his bunk mate, a heavily tattooed Polynesian harpooner named Queequeg, returns very late and discovers Ishmael beneath his covers, both men are alarmed, but the two quickly become close friends and decide to sail together from Nantucket, Massachusetts, on a whaling voyage."})
+    products = append(products, Product{"one World War Z","Book about Zombie that runs really fast",Thumbnail{"http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","",""}})
+    products = append(products, Product{"World War Z","Book about Zombie that runs really fast",Thumbnail{"http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","",""}})
+
+
+    products = append(products, Product{"World War Z","Book about Zombie that runs really fast",Thumbnail{"http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","",""}})
+    products = append(products, Product{"World War Z","Book about Zombie that runs really fast",Thumbnail{"http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","",""}})
+    products = append(products, Product{"World War Z","Book about Zombie that runs really fast",Thumbnail{"http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","",""}})
+    products = append(products, Product{"World War Z","Book about Zombie that runs really fast",Thumbnail{"http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","",""}})
+    products = append(products, Product{"World War Z","Book about Zombie that runs really fast",Thumbnail{"http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","",""}})
+    products = append(products, Product{"World War Z","Book about Zombie that runs really fast",Thumbnail{"http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","",""}})
+    products = append(products, Product{"World War Z","Book about Zombie that runs really fast",Thumbnail{"http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api","http://bks1.books.google.com/books?id=5kJOuuykL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api","",""}})
+
+
     return json.MarshalIndent(products, "", "  ")
 }

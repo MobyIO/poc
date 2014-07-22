@@ -12,10 +12,10 @@ angular.module('moby')
 
     var EventHandler = $famous['famous/core/EventHandler'];
     $scope.eventHandler = new EventHandler();
-    $http.get('http://meanbox1:8080/api/products').success(function(data){
+    $http.get('/api/products').success(function(data){
         $scope.list = data;
     }).error(function(){
-        alert('err');
+        //alert('err');
     });
     $scope.options = {
         myScrollView: {
