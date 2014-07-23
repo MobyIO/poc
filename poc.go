@@ -4,7 +4,6 @@ import (
     "encoding/json"
     "fmt"
     "net/http"
-    "flag"
 )
 
 type Thumbnail struct {
@@ -31,14 +30,8 @@ func listProducts( w http.ResponseWriter, r *http.Request){
 
 func main() {
 
-    // command line flags
-    dir := flag.String("directory", "app/", "angular-famous app")
-    flag.Parse()
-
     // handle all requests by serving a file of the same name
-    fs := http.Dir(*dir)
-    fileHandler := http.FileServer(fs)
-    http.Handle("/", fileHandler)
+    http.Handle("/", http.FileServer(http.Dir("app")))
 
     // handle app api
     http.HandleFunc("/api/products/", listProducts)
