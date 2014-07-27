@@ -10,9 +10,14 @@ type Thumbnail struct {
     Small       string      `json:"small"`
     Medium      string      `json:"medium"`
     Large       string      `json:"large"`
-    XLarge      string      `json:"xLarge"`
 }
 
+type Image struct {
+    Small       string      `json:"small"`
+    Medium      string      `json:"medium"`
+    Large       string      `json:"large"`
+    ExtraLarge  string      `json:"extraLarge"`
+}
 type Product struct {
     Title           string  `json:"title"`
     Description     string  `json:"description"`
